@@ -1,0 +1,36 @@
+<h1>Projects</h1>
+
+<h2>New Project</h2>
+
+<%= form_tag do %>
+  <%= label_tag(:name, "Project Name: ") %>
+  <%= text_field_tag(:name, nil,:required => "true") %>
+
+  <%= label_tag(:duration, "Project Duration: ") %>
+  <%= text_field_tag(:duration, nil,:required => "true") %>
+
+  <!--<%= label_tag(:clone, "Clone default project?") %>
+  <%= check_box_tag(:clone, true) %>-->
+
+  <%= submit_tag("Create") %>
+<% end %>
+
+<h2>All Projects</h2>
+
+<h3>Active</h3>
+<ul id="projects">
+  <% @projects.each do |p| %>
+    <% if p["status"] == "active" %>
+      <li><%= p["name"] %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h3>Archive</h3>
+<ul id="projects">
+  <% @projects.each do |p| %>
+    <% if p["status"] == "archived" %>
+      <li><%= p["name"] %></li>
+    <% end %>
+  <% end %>
+</ul>

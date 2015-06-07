@@ -1,0 +1,10 @@
+{
+  "project": {
+    "name": "New Account",
+    "startDate": "20150907",
+    "endDate": "20150908",
+    "companyId": "999",
+    "newCompany": "Testa",
+    "harvest-timers-enabled":"true"
+  }
+}
