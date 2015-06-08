@@ -8,14 +8,14 @@ default: &default
   adapter: postgresql
   username: tester
   password: test
-  database: app-dev
+  database: teamworker
   host: localhost
   pool: 5
   timeout: 3000
 
 development:
   <<: *default
-  database: app-db
+  database: teamworker
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -23,11 +23,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: app-db
+  database: teamworker-test
   host: localhost
 
 production:
   adapter: postgresql
   host: localhost
   username: user
-  database: app-dev
+  database: teamworker-prod
